@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5041" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Service" representedClassName="Service" syncable="YES">
+        <attribute name="motd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="parseType" attributeType="Integer 16" defaultValueString="777777" syncable="YES"/>
+        <attribute name="statusType" attributeType="Integer 16" defaultValueString="777777" indexed="YES" syncable="YES"/>
+        <attribute name="syncURL" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Service" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

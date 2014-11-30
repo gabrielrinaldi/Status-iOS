@@ -11,16 +11,30 @@
 		C00F8EC31872487000701A76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EC21872487000701A76 /* Foundation.framework */; };
 		C00F8EC51872487000701A76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EC41872487000701A76 /* CoreGraphics.framework */; };
 		C00F8EC71872487000701A76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EC61872487000701A76 /* UIKit.framework */; };
-		C00F8ECD1872487000701A76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00F8ECB1872487000701A76 /* InfoPlist.strings */; };
 		C00F8ECF1872487000701A76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8ECE1872487000701A76 /* main.m */; };
 		C00F8ED31872487000701A76 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8ED21872487000701A76 /* STAppDelegate.m */; };
 		C00F8ED51872487000701A76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00F8ED41872487000701A76 /* Images.xcassets */; };
 		C00F8EDC1872487000701A76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EDB1872487000701A76 /* XCTest.framework */; };
 		C00F8EDD1872487000701A76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EC21872487000701A76 /* Foundation.framework */; };
 		C00F8EDE1872487000701A76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F8EC61872487000701A76 /* UIKit.framework */; };
-		C00F8EE61872487000701A76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00F8EE41872487000701A76 /* InfoPlist.strings */; };
 		C00F8EE81872487000701A76 /* StatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8EE71872487000701A76 /* StatusTests.m */; };
 		C00F8EF2187249DA00701A76 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C00F8EF1187249DA00701A76 /* Settings.bundle */; };
+		C00F8EFB18725BBB00701A76 /* ServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8EF918725BBB00701A76 /* ServicesViewController.m */; };
+		C00F8EFF1872947B00701A76 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C00F8EFE1872947B00701A76 /* Montserrat-Bold.ttf */; };
+		C00F8F01187295E900701A76 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C00F8F00187295E900701A76 /* Montserrat-Regular.ttf */; };
+		C00F8F051872963200701A76 /* ServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8F041872963200701A76 /* ServiceTableViewCell.m */; };
+		C00F8F0A187296F900701A76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00F8F0C187296F900701A76 /* Localizable.strings */; };
+		C00F8F181872A8A900701A76 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C00F8F171872A8A900701A76 /* UIImage+Utilities.m */; };
+		C0C4DF111883A9A50029143A /* Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0C4DF0F1883A9A50029143A /* Status.xcdatamodeld */; };
+		C0C4DF131883AA950029143A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4DF121883AA950029143A /* CoreData.framework */; };
+		C0C4DF161883ACDD0029143A /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C4DF151883ACDD0029143A /* Service.m */; };
+		C0C4DF1A1883B1520029143A /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C4DF191883B1520029143A /* Parser.m */; };
+		C0C4DF1D1883B1620029143A /* HerokuParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C4DF1C1883B1620029143A /* HerokuParser.m */; };
+		C0C4DF201883B1700029143A /* StatusPageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C4DF1F1883B1700029143A /* StatusPageParser.m */; };
+		C0C4DF221883B4230029143A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0C4DF211883B4230029143A /* Services.plist */; };
+		C0DAE423187F801600FF4246 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE422187F801600FF4246 /* Services.m */; };
+		C0DAE428187FD2AA00FF4246 /* ServicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DAE427187FD2AA00FF4246 /* ServicesViewController.xib */; };
+		C0FF134618865B70004F6E53 /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FF134518865B70004F6E53 /* AppearanceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +55,6 @@
 		C00F8EC41872487000701A76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C00F8EC61872487000701A76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C00F8ECA1872487000701A76 /* Status-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Status-Info.plist"; sourceTree = "<group>"; };
-		C00F8ECC1872487000701A76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C00F8ECE1872487000701A76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C00F8ED01872487000701A76 /* Status-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Status-Prefix.pch"; sourceTree = "<group>"; };
 		C00F8ED11872487000701A76 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
@@ -50,9 +63,33 @@
 		C00F8EDA1872487000701A76 /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00F8EDB1872487000701A76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C00F8EE31872487000701A76 /* StatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatusTests-Info.plist"; sourceTree = "<group>"; };
-		C00F8EE51872487000701A76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C00F8EE71872487000701A76 /* StatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusTests.m; sourceTree = "<group>"; };
 		C00F8EF1187249DA00701A76 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C00F8EF818725BBB00701A76 /* ServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesViewController.h; sourceTree = "<group>"; };
+		C00F8EF918725BBB00701A76 /* ServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesViewController.m; sourceTree = "<group>"; };
+		C00F8EFE1872947B00701A76 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		C00F8F00187295E900701A76 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		C00F8F031872963200701A76 /* ServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewCell.h; sourceTree = "<group>"; };
+		C00F8F041872963200701A76 /* ServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewCell.m; sourceTree = "<group>"; };
+		C00F8F131872A6CF00701A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C00F8F161872A8A900701A76 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
+		C00F8F171872A8A900701A76 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
+		C0C4DF101883A9A50029143A /* Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Status.xcdatamodel; sourceTree = "<group>"; };
+		C0C4DF121883AA950029143A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C0C4DF141883ACDD0029143A /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		C0C4DF151883ACDD0029143A /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		C0C4DF181883B1520029143A /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		C0C4DF191883B1520029143A /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		C0C4DF1B1883B1620029143A /* HerokuParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerokuParser.h; sourceTree = "<group>"; };
+		C0C4DF1C1883B1620029143A /* HerokuParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerokuParser.m; sourceTree = "<group>"; };
+		C0C4DF1E1883B1700029143A /* StatusPageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusPageParser.h; sourceTree = "<group>"; };
+		C0C4DF1F1883B1700029143A /* StatusPageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusPageParser.m; sourceTree = "<group>"; };
+		C0C4DF211883B4230029143A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
+		C0DAE421187F801600FF4246 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
+		C0DAE422187F801600FF4246 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
+		C0DAE427187FD2AA00FF4246 /* ServicesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesViewController.xib; sourceTree = "<group>"; };
+		C0FF134418865B70004F6E53 /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceManager.h; sourceTree = "<group>"; };
+		C0FF134518865B70004F6E53 /* AppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C4DF131883AA950029143A /* CoreData.framework in Frameworks */,
 				C00F8EC51872487000701A76 /* CoreGraphics.framework in Frameworks */,
 				C00F8EC71872487000701A76 /* UIKit.framework in Frameworks */,
 				C00F8EC31872487000701A76 /* Foundation.framework in Frameworks */,
@@ -103,11 +141,12 @@
 		C00F8EC11872487000701A76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C00F8EC21872487000701A76 /* Foundation.framework */,
+				C0C4DF121883AA950029143A /* CoreData.framework */,
 				C00F8EC41872487000701A76 /* CoreGraphics.framework */,
+				C00F8EC21872487000701A76 /* Foundation.framework */,
+				596416D9E8B04076865609E4 /* libPods.a */,
 				C00F8EC61872487000701A76 /* UIKit.framework */,
 				C00F8EDB1872487000701A76 /* XCTest.framework */,
-				596416D9E8B04076865609E4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +154,16 @@
 		C00F8EC81872487000701A76 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				C00F8F191872A8AC00701A76 /* Categories */,
+				C00F8EF618724B0D00701A76 /* Classes */,
+				C00F8ED41872487000701A76 /* Images.xcassets */,
+				C00F8F1D1873B2AF00701A76 /* Models */,
+				C0C4DF171883B1330029143A /* Parsers */,
 				C00F8ED11872487000701A76 /* STAppDelegate.h */,
 				C00F8ED21872487000701A76 /* STAppDelegate.m */,
-				C00F8ED41872487000701A76 /* Images.xcassets */,
 				C00F8EC91872487000701A76 /* Supporting Files */,
+				C00F8EF718725B9A00701A76 /* View Controllers */,
+				C00F8F02187295FF00701A76 /* Views */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -126,11 +171,13 @@
 		C00F8EC91872487000701A76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C00F8EFD1872945E00701A76 /* Fonts */,
 				C00F8ECA1872487000701A76 /* Status-Info.plist */,
-				C00F8ECB1872487000701A76 /* InfoPlist.strings */,
 				C00F8ECE1872487000701A76 /* main.m */,
 				C00F8ED01872487000701A76 /* Status-Prefix.pch */,
 				C00F8EF1187249DA00701A76 /* Settings.bundle */,
+				C00F8F0C187296F900701A76 /* Localizable.strings */,
+				C0C4DF211883B4230029143A /* Services.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,9 +195,79 @@
 			isa = PBXGroup;
 			children = (
 				C00F8EE31872487000701A76 /* StatusTests-Info.plist */,
-				C00F8EE41872487000701A76 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C00F8EF618724B0D00701A76 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C0FF134418865B70004F6E53 /* AppearanceManager.h */,
+				C0FF134518865B70004F6E53 /* AppearanceManager.m */,
+				C0DAE421187F801600FF4246 /* Services.h */,
+				C0DAE422187F801600FF4246 /* Services.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C00F8EF718725B9A00701A76 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C00F8EF818725BBB00701A76 /* ServicesViewController.h */,
+				C00F8EF918725BBB00701A76 /* ServicesViewController.m */,
+				C0DAE427187FD2AA00FF4246 /* ServicesViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C00F8EFD1872945E00701A76 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C00F8EFE1872947B00701A76 /* Montserrat-Bold.ttf */,
+				C00F8F00187295E900701A76 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C00F8F02187295FF00701A76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C00F8F031872963200701A76 /* ServiceTableViewCell.h */,
+				C00F8F041872963200701A76 /* ServiceTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C00F8F191872A8AC00701A76 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C00F8F161872A8A900701A76 /* UIImage+Utilities.h */,
+				C00F8F171872A8A900701A76 /* UIImage+Utilities.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		C00F8F1D1873B2AF00701A76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0C4DF141883ACDD0029143A /* Service.h */,
+				C0C4DF151883ACDD0029143A /* Service.m */,
+				C0C4DF0F1883A9A50029143A /* Status.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C0C4DF171883B1330029143A /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				C0C4DF1B1883B1620029143A /* HerokuParser.h */,
+				C0C4DF1C1883B1620029143A /* HerokuParser.m */,
+				C0C4DF1E1883B1700029143A /* StatusPageParser.h */,
+				C0C4DF1F1883B1700029143A /* StatusPageParser.m */,
+				C0C4DF181883B1520029143A /* Parser.h */,
+				C0C4DF191883B1520029143A /* Parser.m */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +331,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C00F8EB61872487000701A76;
 			productRefGroup = C00F8EC01872487000701A76 /* Products */;
@@ -231,8 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00F8ECD1872487000701A76 /* InfoPlist.strings in Resources */,
+				C00F8F01187295E900701A76 /* Montserrat-Regular.ttf in Resources */,
+				C00F8EFF1872947B00701A76 /* Montserrat-Bold.ttf in Resources */,
+				C0DAE428187FD2AA00FF4246 /* ServicesViewController.xib in Resources */,
+				C0C4DF221883B4230029143A /* Services.plist in Resources */,
 				C00F8EF2187249DA00701A76 /* Settings.bundle in Resources */,
+				C00F8F0A187296F900701A76 /* Localizable.strings in Resources */,
 				C00F8ED51872487000701A76 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00F8EE61872487000701A76 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +406,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C4DF1D1883B1620029143A /* HerokuParser.m in Sources */,
+				C0C4DF1A1883B1520029143A /* Parser.m in Sources */,
 				C00F8ECF1872487000701A76 /* main.m in Sources */,
+				C00F8F181872A8A900701A76 /* UIImage+Utilities.m in Sources */,
+				C0C4DF111883A9A50029143A /* Status.xcdatamodeld in Sources */,
+				C00F8F051872963200701A76 /* ServiceTableViewCell.m in Sources */,
+				C0C4DF161883ACDD0029143A /* Service.m in Sources */,
+				C00F8EFB18725BBB00701A76 /* ServicesViewController.m in Sources */,
+				C0C4DF201883B1700029143A /* StatusPageParser.m in Sources */,
+				C0FF134618865B70004F6E53 /* AppearanceManager.m in Sources */,
+				C0DAE423187F801600FF4246 /* Services.m in Sources */,
 				C00F8ED31872487000701A76 /* STAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,20 +440,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C00F8ECB1872487000701A76 /* InfoPlist.strings */ = {
+		C00F8F0C187296F900701A76 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C00F8ECC1872487000701A76 /* en */,
+				C00F8F131872A6CF00701A76 /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C00F8EE41872487000701A76 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C00F8EE51872487000701A76 /* en */,
-			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -570,6 +693,19 @@
 			defaultConfigurationName = AdHoc;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0C4DF0F1883A9A50029143A /* Status.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0C4DF101883A9A50029143A /* Status.xcdatamodel */,
+			);
+			currentVersion = C0C4DF101883A9A50029143A /* Status.xcdatamodel */;
+			path = Status.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C00F8EB71872487000701A76 /* Project object */;
 }

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Parse Status - Incident History</title>
+    <link>http://status.parse.com</link>
+    <description>Parse Status - Incident History</description>
+    <pubDate>Thu, 09 Jan 2014 16:00:23 -0800</pubDate>
+    <item>
+      <title>Elevated error rates</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Jan  1, 09:09 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - We have restored the system to its normal level of operation.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Jan  1, 09:00 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - We have identified the source of the elevated error rates and are working to restore normal capacity.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Jan  1, 08:17 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating an issue with elevated error rates.&lt;/p&gt;      </description>
+      <pubDate>Wed, 01 Jan 2014 09:09:00 -0800</pubDate>
+      <link>http://status.parse.com/incidents/lzf7mjchpy20</link>
+      <guid>http://status.parse.com/incidents/lzf7mjchpy20</guid>
+    </item>
+    <item>
+      <title>Analytics</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Dec 29, 12:20 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The collection of Parse Analytics data has been reestablished.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Dec 29, 09:57 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - Analytics data is still not being collected. We&apos;re working to restore the Parse Analytics service and will post updates to this Status page until the issue is Resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Dec 29, 08:04 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - Analytics data is not being collected at this time. Data from this period will not be backfilled.&lt;/p&gt;      </description>
+      <pubDate>Sun, 29 Dec 2013 12:20:06 -0800</pubDate>
+      <link>http://status.parse.com/incidents/x7yb1mmd4721</link>
+      <guid>http://status.parse.com/incidents/x7yb1mmd4721</guid>
+    </item>
+    <item>
+      <title>Parse Hosting</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Dec 26, 12:57 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Dec 26, 11:57 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - A subset of subdomains and custom domains served through Parse Hosting are seeing Bad Gateway errors.&lt;/p&gt;      </description>
+      <pubDate>Thu, 26 Dec 2013 12:57:00 -0800</pubDate>
+      <link>http://status.parse.com/incidents/hss47d2yk45f</link>
+      <guid>http://status.parse.com/incidents/hss47d2yk45f</guid>
+    </item>
+    <item>
+      <title>Elevated error rates and latency</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Dec 26, 10:22 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Postmortem&lt;/strong&gt; - # Summary of the December 24 Parse Service Disruption&lt;br /&gt;&lt;br /&gt;We would like to share some more details about what happened during the December 24 service disruption. We are working hard to improve reliability and would like to relay information about the nature of this service disruption, our efforts to restore functionality, and the steps we are taking to prevent this sort of issue from happening again.&lt;br /&gt;&lt;br /&gt;At 8:23 A.M. on December 24, our monitoring systems alerted our ops team to a small degree of degraded performance on the API service. This was not the level of performance degradation that would noticeably impact developers&apos; applications, but it was out of the normal operating bounds of the service, and was trending towards further decreased performance, so we concluded that intervention was necessary. We had been projecting higher than normal traffic for the day, but it appeared that traffic was surpassing our increased expectations, so we concluded that more capacity was needed to handle the increased load. As a result, we began a procedure to increase capacity by activating more servers.&lt;br /&gt;&lt;br /&gt;Our standard procedure for increasing capacity involves first a phase of changing configuration, so that our global configuration management system has an awareness of the increased number of servers, and secondly a phase of rolling restarts, so that all impacted servers become aware of the new configuration. The first phase of the procedure completed successfully. During the second phase of this procedure, however, servers with the new configuration were hanging during initialization mode, appearing to start up correctly but never accepting any requests. We halted the rolling restart, but since we were unable to deploy additional capacity, our overall performance continued to degrade.&lt;br /&gt;&lt;br /&gt;The design of our API server is intended to, after initialization, be in one of three states. First, the server can be functioning normally. Second, the server may be functioning normally but with some known degraded behavior. In this situation, the server should respond to a health ping with information about the known degradations. For example, this would include a case where some other servers are unreachable but may become reachable in the future. Third, the server may fail on initialization entirely with an error message if required services are unavailable. Since in this case, the server was following none of these three behaviors, we concluded that there was a bug that we had not encountered before in our server initialization code. Thus, we escalated the issue to a larger set of engineering to begin a search for this bug.&lt;br /&gt;&lt;br /&gt;During this debugging phase, we had a certain amount of capacity available, but were unable to deploy additional capacity or reconfigure existing servers. Thus, performance continued to degrade. By 9:05 A.M. our monitoring determined that a noticeable fraction of developers were experiencing high latency or failed requests.&lt;br /&gt;&lt;br /&gt;Due to the nature of the initialization flaw, where our health monitoring reported no problems during startup, but was not able to respond with a server health report, we suspected an error in the health monitoring code itself. After manual efforts to add additional logging and eventually observing stack traces of the running processes themselves, we concluded that this suspicion was correct. At 10:23, we had tracked down the problem to an error during health monitoring where a particular method of inspection of the health of a network connection, in a particular edge case, was hanging indefinitely instead of failing immediately. We then tracked down all connections in this state to a small set of machines. By 10:41, we had verified that reconfiguring to avoid this connection then let us start up new servers again. We thus began the deployment of additional capacity. By 11:01, we observed that the standard metrics of the system were once again within an acceptable performance window.&lt;br /&gt;&lt;br /&gt;In response to this incident, we are taking the following steps:&lt;br /&gt;&lt;br /&gt;* Adding extensive debug output to our API HTTP service so we can detect problems on startup within the monitoring service itself&lt;br /&gt;* Rearchitecting our client discovery process so it systematically catches any long delay during the process&lt;br /&gt;* Improve and automate our tooling to make stack traces for running servers accessible&lt;br /&gt;* Add functionality to automatically report this type of error during server deployment&lt;br /&gt;&lt;br /&gt;We know that every outage has a serious impact on our developers, and we apologize. We here at Parse take reliability for our customers very seriously. Our engineering team is committed to the long term stability of the platform and works hard to avoid such events. If you have any questions, please reach out to us through our [Help &amp; Community](https://parse.com/help) portal.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Dec 24, 11:21 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Dec 24, 08:58 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;      </description>
+      <pubDate>Tue, 24 Dec 2013 11:21:00 -0800</pubDate>
+      <link>http://status.parse.com/incidents/p9hy357zjvb3</link>
+      <guid>http://status.parse.com/incidents/p9hy357zjvb3</guid>
+    </item>
+    <item>
+      <title>Degraded Performance</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Dec 20, 06:30 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Some apps experienced degraded performance with up to 5 seconds of latency for a period of 30 minutes. The issue has been identified and resolved.&lt;/p&gt;      </description>
+      <pubDate>Fri, 20 Dec 2013 06:30:00 -0800</pubDate>
+      <link>http://status.parse.com/incidents/q9dns8zcgptk</link>
+      <guid>http://status.parse.com/incidents/q9dns8zcgptk</guid>
+    </item>
+    <item>
+      <title>Degraded Service</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Nov  4, 10:06 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - A subset of applications saw elevated error rates starting at 9:49 AM. System recovered by 9:59 AM PST.&lt;/p&gt;      </description>
+      <pubDate>Mon, 04 Nov 2013 10:06:36 -0800</pubDate>
+      <link>http://status.parse.com/incidents/3znvknxmk10z</link>
+      <guid>http://status.parse.com/incidents/3znvknxmk10z</guid>
+    </item>
+    <item>
+      <title>A subset of Parse apps are seeing elevated error rates</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Oct 28, 14:48 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The issue affecting a subset of apps has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct 28, 14:43 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - Apps hosted on a specific cluster are seeing elevated error rates.&lt;/p&gt;      </description>
+      <pubDate>Mon, 28 Oct 2013 14:48:00 -0700</pubDate>
+      <link>http://status.parse.com/incidents/gtdv7rgyn76g</link>
+      <guid>http://status.parse.com/incidents/gtdv7rgyn76g</guid>
+    </item>
+    <item>
+      <title>Background Jobs not running</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Oct 22, 04:10 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The issue affecting Background Job scheduling has been identified and resolved. New Background Jobs should run as expected.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct 22, 04:05 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - Background Jobs appear to remain in &quot;Pending&quot; status, and are not starting as expected. Stay tuned for more information as we investigate.&lt;/p&gt;      </description>
+      <pubDate>Tue, 22 Oct 2013 04:10:52 -0700</pubDate>
+      <link>http://status.parse.com/incidents/8r3c6x51cvss</link>
+      <guid>http://status.parse.com/incidents/8r3c6x51cvss</guid>
+    </item>
+    <item>
+      <title>JavaScript CORS issue</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Oct 21, 16:27 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct 21, 16:10 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - We have identified the issue and are working on a fix.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct 21, 15:34 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are investigating an issue with cross domain requests from the JavaScript SDK. This includes issues with the Data Browser.&lt;/p&gt;      </description>
+      <pubDate>Mon, 21 Oct 2013 16:27:30 -0700</pubDate>
+      <link>http://status.parse.com/incidents/hp2xf2v7f8g8</link>
+      <guid>http://status.parse.com/incidents/hp2xf2v7f8g8</guid>
+    </item>
+    <item>
+      <title>Elevated Error Rates</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Oct  2, 14:32 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The API has resumed its normal functioning.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct  2, 14:21 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - We have identified the problem and are deploying a fix.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Oct  2, 14:01 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - The Parse API is experiencing elevated error rates. We are investigating the problem.&lt;/p&gt;      </description>
+      <pubDate>Wed, 02 Oct 2013 14:32:15 -0700</pubDate>
+      <link>http://status.parse.com/incidents/g3g2fpyvk65j</link>
+      <guid>http://status.parse.com/incidents/g3g2fpyvk65j</guid>
+    </item>
+    <item>
+      <title>Push notification delays</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Sep  9, 15:37 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Push throughput has been restored at this time.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Sep  9, 15:24 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - Push notifications are delayed at this time. We have identified the problem and are working to add sufficient capacity to resolve the issue.&lt;/p&gt;      </description>
+      <pubDate>Mon, 09 Sep 2013 15:37:21 -0700</pubDate>
+      <link>http://status.parse.com/incidents/5rkdt77rn90b</link>
+      <guid>http://status.parse.com/incidents/5rkdt77rn90b</guid>
+    </item>
+    <item>
+      <title>Elevated error rates</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Aug 27, 14:16 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The platform has resumed its normal operation.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 27, 13:27 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - A load balancer misconfiguration caused a brief cross-site outage. The API has resumed partial function and we work to restore full functionality.&lt;/p&gt;      </description>
+      <pubDate>Tue, 27 Aug 2013 14:16:40 -0700</pubDate>
+      <link>http://status.parse.com/incidents/49361mvl9p78</link>
+      <guid>http://status.parse.com/incidents/49361mvl9p78</guid>
+    </item>
+    <item>
+      <title>Some API calls failing</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Aug 25, 14:35 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The platform has resumed normal operation.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 25, 13:11 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - Issues with an underlying service provider have been identified. A number of systems have automatically failed over and we are working to restore full functionality.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 25, 13:03 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - A high percentage of API calls are failing. We are investigating the root case.&lt;/p&gt;      </description>
+      <pubDate>Sun, 25 Aug 2013 14:35:38 -0700</pubDate>
+      <link>http://status.parse.com/incidents/xlqmpvm0v6d4</link>
+      <guid>http://status.parse.com/incidents/xlqmpvm0v6d4</guid>
+    </item>
+    <item>
+      <title>Push Delays</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Aug 20, 12:56 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The delay issues have been resolved and APIs have resumed their normal function.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 20, 12:18 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - We have identified push delays in our system and are working to resolve them.&lt;/p&gt;      </description>
+      <pubDate>Tue, 20 Aug 2013 12:56:55 -0700</pubDate>
+      <link>http://status.parse.com/incidents/jpt6slzfdvjv</link>
+      <guid>http://status.parse.com/incidents/jpt6slzfdvjv</guid>
+    </item>
+    <item>
+      <title>Outage</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Aug 20, 05:42 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Operational issues with the platform are resolved at this time.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 20, 05:13 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - Most platform APIs have resumed their normal functioning. We continue to investigate an increased error rate.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Aug 20, 05:04 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We&apos;re investigating an outage.&lt;/p&gt;      </description>
+      <pubDate>Tue, 20 Aug 2013 05:42:21 -0700</pubDate>
+      <link>http://status.parse.com/incidents/ctfv4ldyy165</link>
+      <guid>http://status.parse.com/incidents/ctfv4ldyy165</guid>
+    </item>
+    <item>
+      <title>Push Notification Outage</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Aug 12, 16:49 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Some push notifications scheduled to be sent between 3:05 PM and 4:40 PM Pacific might not have been delivered due to a bad deploy. We&apos;ve rolled back and restored push notification delivery.&lt;/p&gt;      </description>
+      <pubDate>Mon, 12 Aug 2013 16:49:00 -0700</pubDate>
+      <link>http://status.parse.com/incidents/gwywvz2n85bj</link>
+      <guid>http://status.parse.com/incidents/gwywvz2n85bj</guid>
+    </item>
+    <item>
+      <title>Parse Hosting Issue</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Jul 22, 15:04 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - We have rolled back the offending release and the issue appears to be resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Jul 22, 14:54 PST&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating an issue where some apps on Parse Hosting are not being served. We will update here with more info.&lt;/p&gt;      </description>
+      <pubDate>Mon, 22 Jul 2013 15:04:43 -0700</pubDate>
+      <link>http://status.parse.com/incidents/hjvc79kb47c4</link>
+      <guid>http://status.parse.com/incidents/hjvc79kb47c4</guid>
+    </item>
+  </channel>
+</rss>

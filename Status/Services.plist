@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Heroku</string>
+		<key>syncURL</key>
+		<string>https://status.heroku.com/api/v3/current-status</string>
+		<key>parseType</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Parse</string>
+		<key>syncURL</key>
+		<string>http://status.parse.com/index.json</string>
+		<key>parseType</key>
+		<integer>1</integer>
+	</dict>
+</array>
+</plist>
